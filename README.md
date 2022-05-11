@@ -5,7 +5,7 @@ API que permite registro de filmes
  - Java
  - Maven
  - Springboot
- - MySQL
+ - MongoDB
 
  <sub><b>Denis Scarabelli e </b></sub>
  <sub><b>Iago Chiapetta</b></sub>
