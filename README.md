@@ -10,14 +10,14 @@ API que permite registro de filmes
 ## Sobre os filmes
 Cada filme possui diversos atributos pensandos para a melhor organização e cadastro, são os seguintes:
  - Titulo
- - Data de lançamento;
- - Sinopse;
- - Diretor;
- - Produtor;
- - Categoria;
- - Classificação;
- - Idiomas;
- - Nota;
+ - Data de lançamento
+ - Sinopse
+ - Diretor
+ - Produtor
+ - Categoria
+ - Classificação
+ - Idiomas
+ - Nota
  - Duração
 
  <sub><b>Denis Scarabelli e </b></sub>
