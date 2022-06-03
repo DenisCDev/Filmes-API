@@ -1,5 +1,5 @@
 # Filmes API
-API que permite registro de filmes
+API que permite registro de filmes (Ainda em produção)
 
 ## Tecnologias utilizadas
  - Java
