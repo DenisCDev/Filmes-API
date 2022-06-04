@@ -21,4 +21,5 @@ public interface FilmeService {
 
     List<FilmeDTO> obterPorDiretor(String diretor);
 
+    List<FilmeDTO> obterPorCategoria(String categoria);
 }
