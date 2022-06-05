@@ -8,10 +8,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.tech4me.tech4computer.dto.ComputerDTO;
-import br.com.tech4me.tech4computer.model.Computer;
-import br.com.tech4me.tech4computer.repository.ComputerRepository;
-
 @Service
 public class FilmeServiceImpl implements FilmeService {
     
