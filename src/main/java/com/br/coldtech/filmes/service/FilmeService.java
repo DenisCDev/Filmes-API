@@ -13,7 +13,7 @@ public interface FilmeService {
 
     FilmeDTO cadastrarFilme(FilmeDTO filme);
 
-    void excluirFilmePorId(String id);
+    void apagarFilmePorId(String id);
 
     FilmeDTO atualizarInfoFilme(String id, FilmeDTO filme);
 

@@ -8,6 +8,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.br.coldtech.filmes.dto.FilmeDTO;
+import com.br.coldtech.filmes.model.Filme;
+import com.br.coldtech.filmes.repository.FilmeRepository;
+
 @Service
 public class FilmeServiceImpl implements FilmeService {
     
@@ -17,54 +21,53 @@ public class FilmeServiceImpl implements FilmeService {
     private FilmeRepository repositorio;
 
     @Override
-    public List<FilmeDTO> obterTodos() {
-        List<Computer> pc = repositorio.findAll();
+    public List<FilmeDTO> obterTodosFilmes() {
+        List<Filme> movie = repositorio.findAll();
         
-        return pc.stream()
-        .map(i -> mapper.map(i, ComputerDTO.class))
+        return movie.stream()
+        .map(i -> mapper.map(i, FilmeDTO.class))
         .collect(Collectors.toList());
     }
 
     @Override
-    public Optional<ComputerDTO> obterComputadorPeloId(String id) {
-        Optional<Computer> pc = repositorio.findById(id);
+    public Optional<FilmeDTO> obterFilmePorId(String id) {
+        Optional<Filme> movie = repositorio.findById(id);
 
-        if(pc.isPresent()) {
-            return Optional.of(mapper.map(pc.get(), ComputerDTO.class));
+        if(movie.isPresent()) {
+            return Optional.of(mapper.map(movie.get(), FilmeDTO.class));
         }
 
         return Optional.empty();
     }
 
     @Override
-    public ComputerDTO armazenarComputador(ComputerDTO computador) {
-        Computer saveComputador = mapper.map(computador, Computer.class);
-        saveComputador = repositorio.save(saveComputador);
+    public FilmeDTO cadastrarFilme(FilmeDTO filme) {
+        Filme salvarFilme = mapper.map(filme, Filme.class);
+        salvarFilme = repositorio.save(salvarFilme);
         
-        return mapper.map(saveComputador, ComputerDTO.class);
+        return mapper.map(salvarFilme, FilmeDTO.class);
     }
 
     @Override
-    public void excluirComputadorPeloId(String id) {
+    public void apagarFilmePorId(String id) {
         repositorio.deleteById(id);
-        
     }
 
     @Override
-    public ComputerDTO atualizarComputador(String id, ComputerDTO computador) {
-        Computer attComputador = mapper.map(computador, Computer.class);
-        attComputador.setId(id);
-        attComputador = repositorio.save(attComputador);
+    public FilmeDTO atualizarInfoFilme(String id, FilmeDTO filme) {
+        Filme atualizarFilme = mapper.map(filme, Filme.class);
+        atualizarFilme.setId(id);
+        atualizarFilme = repositorio.save(atualizarFilme);
 
-        return mapper.map(attComputador, ComputerDTO.class);
+        return mapper.map(atualizarFilme, FilmeDTO.class);
     }
 
     @Override
-    public List<ComputerDTO> obterPorPreco(String preco) {
-        List<Computer> pc = repositorio.findByPreco(preco);
+    public List<FilmeDTO> obterPorNome(String nome) {
+        List<Filme> movie = repositorio.findByNome(nome);
        
-        return pc.stream()
-        .map(i -> mapper.map(i, ComputerDTO.class))
+        return movie.stream()
+        .map(i -> mapper.map(i, FilmeDTO.class))
         .collect(Collectors.toList());
     }
     
