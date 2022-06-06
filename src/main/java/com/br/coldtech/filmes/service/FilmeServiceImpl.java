@@ -79,5 +79,14 @@ public class FilmeServiceImpl implements FilmeService {
         .map(i -> mapper.map(i, FilmeDTO.class))
         .collect(Collectors.toList());
     }
+
+    @Override
+    public List<FilmeDTO> obterPorCategoria(String categoria) {
+        List<Filme> movie = repositorio.findByCategoria(categoria);
+       
+        return movie.stream()
+        .map(i -> mapper.map(i, FilmeDTO.class))
+        .collect(Collectors.toList());
+    }
     
 }
