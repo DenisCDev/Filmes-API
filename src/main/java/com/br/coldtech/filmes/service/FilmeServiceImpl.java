@@ -70,5 +70,14 @@ public class FilmeServiceImpl implements FilmeService {
         .map(i -> mapper.map(i, FilmeDTO.class))
         .collect(Collectors.toList());
     }
+
+    @Override
+    public List<FilmeDTO> obterPorDiretor(String diretor) {
+        List<Filme> movie = repositorio.findByDiretor(diretor);
+       
+        return movie.stream()
+        .map(i -> mapper.map(i, FilmeDTO.class))
+        .collect(Collectors.toList());
+    }
     
 }
