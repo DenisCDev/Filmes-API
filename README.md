@@ -20,5 +20,8 @@ Cada filme possui diversos atributos pensandos para a melhor organização e cad
  - Nota
  - Duração
 
+## Pesquisa
+É possível buscar ou filtrar filmes pelos seguintes atributos: ID, nome, diretor, categoria ou classificação
+
  <sub><b>Denis Scarabelli e </b></sub>
  <sub><b>Iago Chiapetta</b></sub>
