@@ -91,7 +91,7 @@ public class FilmeServiceImpl implements FilmeService {
     
     @Override
     public List<FilmeDTO> obterPorClassificacao(String classificacao) {
-        List<Filme> movie = repositorio.findByClassificacao(classificacao);
+        List<Filme> movie = repositorio.findByClassificacao(classicacao);
        
         return movie.stream()
         .map(i -> mapper.map(i, FilmeDTO.class))
