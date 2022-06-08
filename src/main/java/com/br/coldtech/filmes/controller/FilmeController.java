@@ -20,7 +20,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.br.coldtech.filmes.dto.FilmeDTO;
+import com.br.coldtech.filmes.response.FilmeResponseIdDTO;
 import com.br.coldtech.filmes.service.FilmeService;
+import com.br.coldtech.filmes.response.FilmeRespondeDTO;
 
 @RestController
 @RequestMapping("/api/filmes")

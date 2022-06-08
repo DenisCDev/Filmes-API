@@ -61,7 +61,6 @@ public class FilmeServiceImpl implements FilmeService {
 
         return mapper.map(atualizarFilme, FilmeDTO.class);
     }
-
     @Override
     public List<FilmeDTO> obterPorNome(String nome) {
         List<Filme> movie = repositorio.findByNome(nome);
@@ -97,5 +96,4 @@ public class FilmeServiceImpl implements FilmeService {
         .map(i -> mapper.map(i, FilmeDTO.class))
         .collect(Collectors.toList());
     }
-
 }

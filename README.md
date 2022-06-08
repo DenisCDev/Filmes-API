@@ -6,6 +6,7 @@ API que permite registro de filmes (Ainda em produção)
  - Maven
  - Springboot
  - MongoDB
+ - AWS
 
 ## Sobre os filmes
 Cada filme possui diversos atributos pensandos para a melhor organização e cadastro, são os seguintes:
