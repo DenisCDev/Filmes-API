@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "Filmes-API"
+		},
+		{
+			"path": "Eureka-Server"
+		}
+	],
+	"settings": {}
+}
